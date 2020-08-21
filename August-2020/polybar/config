@@ -1,0 +1,155 @@
+;==========================================================
+;
+;
+;   ██████╗  ██████╗ ██╗  ██╗   ██╗██████╗  █████╗ ██████╗
+;   ██╔══██╗██╔═══██╗██║  ╚██╗ ██╔╝██╔══██╗██╔══██╗██╔══██╗
+;   ██████╔╝██║   ██║██║   ╚████╔╝ ██████╔╝███████║██████╔╝
+;   ██╔═══╝ ██║   ██║██║    ╚██╔╝  ██╔══██╗██╔══██║██╔══██╗
+;   ██║     ╚██████╔╝███████╗██║   ██████╔╝██║  ██║██║  ██║
+;   ╚═╝      ╚═════╝ ╚══════╝╚═╝   ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝
+;
+;
+;   To learn more about how to configure Polybar
+;   go to https://github.com/polybar/polybar
+;
+;   The README contains a lot of information
+;
+;==========================================================
+
+
+[settings]
+screenchange-reload         = true
+
+
+
+[bar/main]
+bottom                      = true
+height                      = 30
+width                       = 1349
+radius                      = 4
+override-redirect           = true
+offset-x                    = 9
+offset-y                    = 7
+background                  = #0E1419
+
+font-0                      = Fira Code:size=12;3
+font-1                      = Fira Code:size=10;2
+modules-left                = windows
+modules-right               = vol cpu ram date
+
+wm-restack = i3
+
+tray-position = right
+tray-offset-x = -430
+tray-detached = true
+tray-background = #0E1419
+
+
+
+[module/windows]
+index-sort                  = true
+pin-workspaces              = true
+type                        = internal/i3
+wrapping-scroll             = false
+
+label-focused-font          = 0
+label-unfocused-font        = 0
+label-urgent-font           = 0
+label-mode-font             = 0
+
+label-focused-padding       = 1
+label-unfocused-padding     = 1
+label-urgent-padding        = 1
+label-mode-padding          = 1
+
+label-focused               = %name%
+label-unfocused             = %name%
+label-urgent                = %name%
+label-mode                  = %name%
+
+label-urgent-background     = #e2bcc4
+label-focused-background    = #e5e1cf
+label-urgent-foreground     = #0E1419
+label-focused-foreground    = #0E1419
+
+
+
+[module/date]
+type = internal/date
+interval = 10
+
+time = "%H:%M"
+date = "%d %b"
+
+label = %time% %{F#95e5cb}|%{F-} %date%
+label-font = 2
+label-padding = 2
+
+
+
+[module/ram]
+type = internal/memory
+interval = 2
+
+label = %{T2}%{F#95e5cb}RAM:%{F-} %mb_used%
+;label-background = #4E3D42
+label-padding  = 1
+
+
+
+[module/cpu]
+type = internal/cpu
+interval = 4
+
+label = %{T2}%{F#95e5cb}CPU:%{F-} %percentage%%
+;label-background = #3A4454
+label-padding  = 1
+
+
+
+[module/vol]
+type = internal/pulseaudio
+
+label-muted = %{T2}%{F#95e5cb}Vol:%{F-} 0%
+label-volume = %{T2}%{F#95e5cb}Vol:%{F-} %percentage%%
+
+format = <label-volume>
+format-muted = <label-muted>
+
+label-muted-padding = 1
+label-volume-padding = 1
+
+;label-muted-background = #825472
+;label-volume-background = #825472
+
+
+
+
+
+
+
+
+
+
+;[module/eth]
+;type = internal/network
+;interface = eno1
+;interval = 1
+
+;label-connected-font = 1
+;label-disconnected-font = 1
+
+;format-connected = <label-connected>
+;format-disconnected = <label-disconnected>
+
+;label-connected = ETH YES
+;label-disconnected = ETH NO
+
+;label-connected-background = #B5FFE1
+;label-disconnected-background = #CC2936
+
+;label-connected-foreground = #08415C
+;label-disconnected-foreground = #08415C
+
+;label-connected-padding = 1
+;label-disconnected-padding = 1
