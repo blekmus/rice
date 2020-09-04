@@ -1,0 +1,37 @@
+@import "colors.rasi"
+
+
+* {
+    background-color: @background;
+    text-color: @foreground;
+}
+
+window {
+    location: center; 
+    height: 50%;
+}
+
+inputbar {
+    children: [entry];
+}
+
+entry {
+  padding: 10px;
+  
+  background-color: @background-light;
+  width: 100%;
+  expand: false;
+}
+
+listview {
+    padding: 0px;
+}
+
+element {
+    padding: 5px 10px;
+}
+
+element selected {
+    background-color: @accent;
+    text-color: black;
+}

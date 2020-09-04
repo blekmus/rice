@@ -1,0 +1,9 @@
+{
+    "*.css": {
+        "tabsize": 2
+    },
+    "colorscheme": "custom-scheme",
+    "saveundo": true,
+    "statusformatl": " $(filename) $(status.paste)| $(opt:filetype) |",
+    "statusformatr": ""
+}
