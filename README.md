@@ -1,4 +1,4 @@
-# August-September 2020
+# August 2020
 ### Config
 - **Distro:** Manjaro
 - **WM:** i3-gaps
