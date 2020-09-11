@@ -19,25 +19,25 @@
 ### Previews
 
 <div align="center">
-  <img src="https://github.com/fire-walker/rice/blob/August-2020/master/home/.config/previews/Background.png?raw=true">
+  <img src="https://github.com/fire-walker/rice/blob/master/August-2020/home/.config/previews/Background.png?raw=true">
   Background - feh
   <br /><br />
 </div>
 
 <div align="center">
-  <img src="https://github.com/fire-walker/rice/blob/August-2020/master/home/.config/previews/Terms.png?raw=true">
+  <img src="https://github.com/fire-walker/rice/blob/master/August-2020/home/.config/previews/Terms.png?raw=true">
   Terminals - kitty
   <br /><br />
 </div>
 
 <div align="center">
-  <img src="https://github.com/fire-walker/rice/blob/August-2020/master/home/.config/previews/Firefox.png?raw=true">
+  <img src="https://github.com/fire-walker/rice/blob/master/August-2020/home/.config/previews/Firefox.png?raw=true">
   Firefox
   <br /><br />
 </div>
 
 <div align="center">
-  <img src="https://github.com/fire-walker/rice/blob/August-2020/master//home/.config/previews/Dmenu.png?raw=true">
+  <img src="https://github.com/fire-walker/rice/blob/master/August-2020/home/.config/previews/Dmenu.png?raw=true">
   Dmenu - rofi
   <br /><br />
 </div>
