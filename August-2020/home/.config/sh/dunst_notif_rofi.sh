@@ -10,7 +10,7 @@ ENABLE_OPTION="enable notifications"
 DISABLE_OPTION="disable notifications"
 SELECTED_OPTION=$(echo -e "$ENABLE_OPTION\n$DISABLE_OPTION" | rofi -lines 5 -dmenu)
 
-if [[ ! -z "$SELECTED_OPTION" ]]
+if [[ -n "$SELECTED_OPTION" ]]
 then
 	if [[ "$SELECTED_OPTION" == "$ENABLE_OPTION" ]]
 	then

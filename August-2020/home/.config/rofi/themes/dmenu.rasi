@@ -2,36 +2,48 @@
 
 
 * {
-    background-color: @background;
     text-color: @foreground;
 }
 
 window {
     location: center; 
-    height: 50%;
+    background-color: transparent;
+    fullscreen: true;
+}
+
+mainbox {
+    margin: 150px 400px;
+    background-color: transparent;
 }
 
 inputbar {
     children: [entry];
+    background-color: @background-light;
+    margin: 10px 10px 5px 10px;
+    border-radius: 4px;
 }
 
 entry {
-  padding: 10px;
-  
   background-color: @background-light;
-  width: 100%;
-  expand: false;
+  padding: 10px 10px;
+  text-color: @accent;
+  font: "Fira Code 12";
 }
 
 listview {
     padding: 0px;
+    margin: 0px 10px 10px 10px;
+    border-radius: 4px;
+    background-color: @background;
+    font: "Fira Code 13";
 }
 
 element {
     padding: 5px 10px;
+    background-color: @background;
 }
 
-element selected {
+element.selected {
     background-color: @accent;
-    text-color: black;
+    text-color: @background;
 }

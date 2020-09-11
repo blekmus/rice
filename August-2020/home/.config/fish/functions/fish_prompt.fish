@@ -2,9 +2,9 @@ function fish_prompt
     set -g fish_prompt_pwd_dir_length 0
    
     if contains -- $USER root toor
-	set suffix '#'
+    	set suffix '#'
     else
-	set suffix '$'
+    	set suffix '$'
     end
 
     set_color cyan

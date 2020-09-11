@@ -1,101 +1,37 @@
 @import "colors.rasi"
 
-/* ########### */
-
 * {
-  /* General */
-  text-font:                            "Comfortaa 14";
-  icon-font:                            "Hurmit Nerd Font Mono 48";
-  icon-font-small:                      "Hurmit Nerd Font Mono 24";
-
-  option-6-listview-spacing:            10px;
-
-  menu-window-padding:                   25px 35px;
-  menu-inputbar-margin:                  10px 0px;
-  menu-prompt-padding:                   10px 20px 10px 20px;
-  menu-prompt-margin:                    0px 0px 0px -2px;
-  menu-element-border:                   10px;
-  menu-element-padding:                  25px 35px 20px -40px;
+    text-color: @foreground;
+    background-color: transparent;
 }
 
-/* ########### */
-
-#window {
-  width: 45.5%;
-  height: 24%;
-  anchor: center;
-  location: center;
-  x-offset: 0%;
-  y-offset: 0%;
+window {
+    location: center;
+    fullscreen: true;
+    children: [horibox];
 }
 
-/* ########### */
-
-* {
-  background-color: @background;
-  text-color: @foreground;
-  font: @icon-font;
+horibox {
+    children: [ listview ];
+    margin: 313px 375px;
 }
 
-#horibox {
-  children: [ listview ];
-}
-#listview {
-  layout: horizontal;
-}
-#element {
-  padding: @option-element-padding;
-  background-color: @background-light;
-}
-#element.selected {
-  background-color: @accent;
-  text-color: @background;
+listview {
+    layout: horizontal;
+    spacing: 10px;
 }
 
-/* ########### */
-
-* {
-  font: @text-font;
-}
-#window {
-  padding: @menu-window-padding;
-  children: [ inputbar, horibox ];
-}
-#inputbar {
-  enabled: false;
-}
-#horibox {
-  padding: 0px;
-}
-#listview {
-  spacing: @option-6-listview-spacing;
-  lines: 4;
-}
-#element {
-  font: @icon-font;
-  border: @menu-element-border;
-  padding: @menu-element-padding;
-  border-color: @background-light;
-}
-#element.selected {
-  border-color: @accent;
-}
-element.active,
-element.selected.urgent {
-  background-color: @on;
-  text-color: @background;
-  border-color: @on;
-}
-element.selected.urgent {
-  border-color: @accent;
-}
-element.urgent,
-element.selected.active {
-  background-color: @off;
-  text-color: @background;
-  border-color: @off;
-}
-element.selected.active {
-  border-color: @accent;
+element {
+    background-color: @background-light;
+    font: "Hurmit Nerd Font Mono 49";
+    border: 10px;
+    padding: 28px 42px 26px -38px;
+    border-color: @background-light;
+    border-radius: 1px;
 }
 
+element.selected {
+    background-color: @accent;
+    text-color: @background;
+    border-color: @accent;
+}

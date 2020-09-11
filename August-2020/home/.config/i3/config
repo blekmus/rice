@@ -1,11 +1,24 @@
+# ██╗ ██████╗          ██████╗   █████╗  ██████╗   ██████╗
+# ██║ ╚════██╗        ██╔════╝  ██╔══██╗ ██╔══██╗ ██╔════╝
+# ██║  █████╔╝ █████╗ ██║  ██╗  ███████║ ██████╔╝ ╚█████╗
+# ██║  ╚═══██╗ ╚════╝ ██║  ╚██╗ ██╔══██║ ██╔═══╝   ╚═══██╗
+# ██║ ██████╔╝        ╚██████╔╝ ██║  ██║ ██║      ██████╔╝
+# ╚═╝ ╚═════╝          ╚═════╝  ╚═╝  ╚═╝ ╚═╝      ╚═════╝
+
 # Bindings ================================
-# start a terminal
+# terminal binding
 bindsym $mod+Return exec kitty
 
 # kill focused window
 bindsym $mod+q kill
 
-# rofi dmenu
+# firefox binding
+bindsym $mod+shift+f exec firefox
+
+# reset picom
+bindsym $mod+shift+p exec killall picom; picom -b
+
+# rofi dmenu binding
 bindsym $mod+d exec rofi -show drun -no-show-icons -theme ~/.config/rofi/themes/dmenu.rasi
 
 # change focus - keys
@@ -32,19 +45,19 @@ bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
-# split in horizontal
+# split horizontally
 bindsym $mod+b split h
 
-# split in vertical
+# split vertically
 bindsym $mod+v split v
 
 # fullscreen
 bindsym $mod+f fullscreen toggle
 
-# container layout
-bindsym $mod+s layout stacking
-bindsym $mod+w layout tabbed
+# window layout
 bindsym $mod+e layout toggle split
+#bindsym $mod+s layout stacking
+#bindsym $mod+w layout tabbed
 
 # toggle tiling / floating
 bindsym $mod+space floating toggle
@@ -89,29 +102,43 @@ bindsym $mod+n		gaps inner current plus 3
 bindsym $mod+m		gaps inner current minus 3
 
 # resize gaps
-bindsym $mod+y resize shrink width 1 px or 1 ppt
+bindsym $mod+y resize grow width 1 px or 1 ppt
 bindsym $mod+u resize grow height 1 px or 1 ppt
 bindsym $mod+i resize shrink height 1 px or 1 ppt
-bindsym $mod+o resize grow width 1 px or 1 ppt
+bindsym $mod+o resize shrink width 1 px or 1 ppt
 
-# rofi screenshot panel
+# rofi screenshot panel binding
 bindsym Print exec ~/.config/rofi/scripts/screenshot.sh
 
-# rofi power settings panel
+# rofi power settings panel binding
 bindsym $mod+Shift+e exec ~/.config/rofi/scripts/powermenu.sh
 
 
 
 
-# Other ================================
-# default font
-font pango:monospace 9
+# Gaps and Floats and Borders ===========
+# gap sizes
+gaps inner 9
+gaps outer 0
+gaps bottom 36
 
+# max floating window size
+floating_maximum_size -1 x -1
+
+# hide border and title bar inherited from i3
+default_border none
+default_floating_border none
+hide_edge_borders both
+
+# stop focus from following mouse
+focus_follows_mouse no
+
+
+
+
+# Variables ===========================
 # default i3 access key
 set $mod Mod4
-
-# start network manager applet on systray
-exec --no-startup-id nm-applet
 
 # mouse to move stuff
 floating_modifier $mod
@@ -128,33 +155,22 @@ set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
 
-# start picom compositor
-exec --no-startup-id picom -b
-
-# start feh to display background
-exec_always feh --bg-scale ~/Pictures/Images/wall.png
-
-# hide border and title bar of i3
-default_border none
-default_floating_border none
-hide_edge_borders both
-
-# default gap sizes
-gaps inner 9
-gaps outer 0
-gaps bottom 36
-
-# stop focus from following mouse
-focus_follows_mouse no
-
-# i3 default colors
+# i3 color variables 
+# but guess what, I don't fuckin need em
 #client.focused             #0c0c0c  #888888  #4c7899  #888888
 #client.unfocused           #0c0c0c  #0c0c0c  #4c7899  #0c0c0c
 #client.focused_inactive    #0c0c0c  #0c0c0c  #4c7899  #0c0c0c
 #client.urgent              #0c0c0c  #0c0c0c  #4c7899  #0c0c0c
 
-# max floating window size
-floating_maximum_size -1 x -1
+
+
+
+# Execusions ===========================
+# start network manager applet on systray
+exec --no-startup-id nm-applet
+
+# start picom compositor
+exec_always --no-startup-id picom -b
 
 # launch bar
 exec ~/.config/polybar/launch.sh
@@ -162,3 +178,5 @@ exec ~/.config/polybar/launch.sh
 # auto suspend
 exec xautolock -notify 30 -notifier "dunstify -u critical -t 20000 'LOCKING in 30s'" -time 20 -locker "systemctl suspend" -corners "+00-"
 
+# start feh to display background
+exec_always feh --bg-fill ~/.config/feh/wall.jpg

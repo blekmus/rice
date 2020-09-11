@@ -1,7 +1,7 @@
 function helpie
     if [ "$argv" = 'edit' ]
-	    vim /home/someone/backups/commands
+	    micro $HOME/Sandbox/commands
     else
-	    cat /home/someone/backups/commands
+	    cat $HOME/Sandbox/commands
     end
 end

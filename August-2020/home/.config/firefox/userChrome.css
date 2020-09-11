@@ -1,4 +1,10 @@
-/*================ GLOBAL COLORS ================*/
+/* ███████╗ ██╗ ██████╗  ███████╗ ███████╗  █████╗  ██   ██╗ */
+/* ██╔════╝ ██║ ██╔══██╗ ██╔════╝ ██╔════╝ ██╔══██╗ ╚██╗██╔╝ */
+/* █████╗   ██║ ██████╔╝ █████╗   █████╗   ██║  ██║  ╚███╔╝  */
+/* ██╔══╝   ██║ ██╔══██╗ ██╔══╝   ██╔══╝   ██║  ██║  ██╔██╗  */
+/* ██║      ██║ ██║  ██║ ███████╗ ██║      ╚█████╔╝ ██╔╝╚██╗ */
+/* ╚═╝      ╚═╝ ╚═╝  ╚═╝ ╚══════╝ ╚═╝       ╚════╝  ╚═╝  ╚═╝ */
+
 :root {
 	--bg: #0e1419;
 	--bg-light: #15212b;
@@ -8,10 +14,35 @@
     font-family: "Noto Sans" !important;
     font-size: 13px !important;
 }
- 
 
+window,
+#main-window,
+#toolbar-menubar,
+#TabsToolbar,
+#PersonalToolbar,
+#navigator-toolbox,
+#sidebar-box,
+toolbar {
+	background-color: var(--bg) !important;
+	-moz-appearance: none !important;
+	background-image: none !important;
+	border: none !important;
+}
 
-/*================== TABS BAR ==================*/
+#identity-box,
+#tracking-protection-icon-container,
+#urlbar-background{
+	display: none !important;
+}
+
+#whats-new-menu-button,
+#pocket-button,
+#pageActionSeparator,
+#pageActionButton,
+#reader-mode-button{
+	display: none !important;
+} 
+
 #titlebar #TabsToolbar {
 	padding: 6px 0px 2px 6px !important;
 	background: var(--bg) !important;
@@ -53,8 +84,6 @@ tab[selected="true"] .tab-background {
 	transition: all 0.3s ease !important;
 }
 
-
-/*================== NAV BAR ==================*/
 toolbar#nav-bar {
 	background: var(--bg) !important;
 	box-shadow: none !important;
@@ -66,8 +95,7 @@ toolbar#nav-bar {
 
 #forward-button {
 	list-style-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAQAAAC1+jfqAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QAAKqNIzIAAAAJcEhZcwAADdcAAA3XAUIom3gAAAAHdElNRQfiAxMSOA3k2CXQAAAAbklEQVQoz5WRMQqDABAEF4UgKEIIPkKJii+3s7NLpY1N3qBR84axsPYOt1sYuNtdSZLEi5FG1yKk5U9tIQ86dioLiejZKC0k5sPK20JSBn4UFvJkYiG3kIwvM8npAt2Vc8J50onpFOVU7Y51PfcBtUFUSir+geUAAAAldEVYdGRhdGU6Y3JlYXRlADIwMTgtMDMtMTlUMTg6NTY6MTMrMDE6MDDECqmDAAAAJXRFWHRkYXRlOm1vZGlmeQAyMDE4LTAzLTE5VDE4OjU2OjEzKzAxOjAwtVcRPwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAAASUVORK5CYII=') !important;
-  }  
-
+}  
 
 .toolbarbutton-1{
 	--toolbarbutton-hover-background: none !important; 
@@ -79,24 +107,9 @@ toolbar#nav-bar {
 	border: none !important;
 	box-shadow: none !important;
 	background: none !important;
-  }
-
+}
 
 .tab-line{
-	display: none !important;
-}
-
-#identity-box,
-#tracking-protection-icon-container,
-#urlbar-background{
-	display: none !important;
-}
-
-#whats-new-menu-button,
-#pocket-button,
-#pageActionSeparator,
-#pageActionButton,
-#reader-mode-button{
 	display: none !important;
 }
 
@@ -104,23 +117,18 @@ toolbar#nav-bar {
 	background-color: var(--bg) !important;
 	border-radius: 0px 0px 4px 4px !important;
 	padding: 5px;
-  }
+}
+
+#urlbar-container {
+	margin-left: 15px;
+}
    
 .urlbarView-body-inner {
 	border-top: none !important;
 }
 
-window,
-#main-window,
-#toolbar-menubar,
-#TabsToolbar,
-#PersonalToolbar,
-#navigator-toolbox,
-#sidebar-box,
-toolbar {
-  background-color: var(--bg) !important;
-  -moz-appearance: none !important;
-  background-image: none !important;
-  border: none !important;
-}
- 
+#PanelUI-button {
+	border-image-slice: 0 !important;
+	margin-inline-start: 0 !important;
+	padding-inline-start: 0 !important;
+  }

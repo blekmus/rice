@@ -8,22 +8,21 @@ reboot="ﰇ"
 lock=""
 suspend="鈴"
 
-# Variable passed to rofi
+# Variables passed to rofi
 options="$shutdown\n$reboot\n$lock\n$suspend"
-
 
 chosen="$(echo -e "$options" | $rofi_command -dmenu)"
 case $chosen in
-    $shutdown)
+    "$shutdown")
         systemctl poweroff
         ;;
-    $reboot)
+    "$reboot")
         systemctl reboot
         ;;
-    $lock)
+    "$lock")
         exit i3
         ;;
-    $suspend)
+    "$suspend")
         systemctl suspend
         ;;
 esac

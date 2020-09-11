@@ -1,108 +1,38 @@
-/*
- *
- * Author : Aditya Shakya (adi1090x)
- * Mail : adi1090x@gmail.com
- * Github : @adi1090x
- * Reddit : @adi1090x
- *
- */
-
 @import "colors.rasi"
 
-/* ########### */
 
 * {
-  /* General */
-  text-font:                            "Comfortaa 14";
-  icon-font:                            "Hurmit Nerd Font Mono 48";
-  icon-font-small:                      "Hurmit Nerd Font Mono 24";
-
-  option-6-listview-spacing:            20px;
-
-  menu-window-padding:                   40px 25px 25px 25px;
-  menu-element-border:                   10px;
-  menu-element-padding:                  25px 35px 20px -40px;
+    text-color: @foreground;
+    background-color: transparent;
 }
 
-/* ########### */
-
-#window {
-  width: 35.5%;
-  height: 28%;
-  anchor: center;
-  location: center;
-  x-offset: 0%;
-  y-offset: 0%;
+window {
+    location: center;
+    fullscreen: true;
+    children: [horibox];
 }
 
-/* ########### */
-
-* {
-  background-color: @background;
-  text-color: @foreground;
-  font: @icon-font;
+horibox {
+    children: [ listview ];
+    margin: 313px 459px;
 }
 
-#horibox {
-  children: [ listview ];
-}
-#listview {
-  layout: horizontal;
-}
-#element {
-  padding: @option-element-padding;
-  background-color: @background-light;
-}
-#element.selected {
-  background-color: @accent;
-  text-color: @background;
+listview {
+    layout: horizontal;
+    spacing: 10px;
 }
 
-/* ########### */
-
-* {
-  font: @text-font;
-}
-#window {
-  padding: @menu-window-padding;
-  children: [ horibox ];
-}
-#inputbar {
-  enabled: false;
+element {
+    background-color: @background-light;
+    font: "Hurmit Nerd Font Mono 49";
+    border: 10px;
+    padding: 28px 42px 26px -38px;
+    border-color: @background-light;
+    border-radius: 1px;
 }
 
-#horibox {
-  padding: 0px;
+element.selected {
+    background-color: @accent;
+    text-color: @background;
+    border-color: @accent;
 }
-#listview {
-  spacing: @option-6-listview-spacing;
-  lines: 3;
-}
-#element {
-  font: @icon-font;
-  border: @menu-element-border;
-  padding: @menu-element-padding;
-  border-color: @background-light;
-}
-#element.selected {
-  border-color: @accent;
-}
-element.active,
-element.selected.urgent {
-  background-color: @on;
-  text-color: @background;
-  border-color: @on;
-}
-element.selected.urgent {
-  border-color: @accent;
-}
-element.urgent,
-element.selected.active {
-  background-color: @off;
-  text-color: @background;
-  border-color: @off;
-}
-element.selected.active {
-  border-color: @accent;
-}
-
