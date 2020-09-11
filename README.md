@@ -1,4 +1,4 @@
-# 2020-August Build
+# August 2020
 
 ### Config
 - **Distro:** Manjaro
@@ -42,4 +42,4 @@
   <br /><br />
 </div>
 
-More previews [here...](https://github.com/fire-walker/rice/tree/August-2020/master/home/.config/previews)
+More previews [here...](https://github.com/fire-walker/rice/tree/master/August-2020/home/.config/previews)
