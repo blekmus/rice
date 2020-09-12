@@ -11,6 +11,7 @@
 - **Menus:** [Rofi](https://github.com/davatorium/rofi)
 - **Bar:** [Polybar](https://github.com/polybar/polybar)
 - **Fetch:** Neofetch
+- **Protonmail:** [theme](https://github.com/fire-walker/protonmail-themes)
 - **File Manager:** [Thunar](https://wiki.archlinux.org/index.php/Thunar)
 - **DuckDuckGo:** [here](https://www.duckduckgo.com/?kae=d&k5=1&kaq=-1&kj=0e1419&k7=070b0f&k21=141c25&kaa=d36a97&k8=9de2d5&kx=20b7bf&k9=ffffff)
 - **Firefox:**
