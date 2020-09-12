@@ -16,7 +16,7 @@ bindsym $mod+q kill
 bindsym $mod+shift+f exec firefox
 
 # reset picom
-bindsym $mod+shift+p exec killall picom; picom -b
+bindsym $mod+shift+p exec killall picom;exec picom -b
 
 # rofi dmenu binding
 bindsym $mod+d exec rofi -show drun -no-show-icons -theme ~/.config/rofi/themes/dmenu.rasi
