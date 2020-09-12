@@ -33,5 +33,4 @@
 <div align="center">
   <img src="https://github.com/fire-walker/rice/blob/master/August-2020/home/.config/previews/Dmenu.png?raw=true">
 </div>
-<br />
 More previews [here...](https://github.com/fire-walker/rice/tree/master/August-2020/home/.config/previews)
