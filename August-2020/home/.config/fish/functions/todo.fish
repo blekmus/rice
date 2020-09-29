@@ -1,3 +1,3 @@
-function todo
-    python3 ~/.config/sh/todo.py $argv
+function helpie
+    python3 ~/Code/Github/helpie/helpie.py $argv
 end

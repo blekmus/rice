@@ -13,7 +13,7 @@ window {
 
 horibox {
     children: [ listview ];
-    margin: 313px 375px;
+    margin: 315px 389px;
 }
 
 listview {
@@ -22,12 +22,16 @@ listview {
 }
 
 element {
+	children: [element-text];
     background-color: @background-light;
-    font: "Hurmit Nerd Font Mono 49";
     border: 10px;
-    padding: 28px 42px 26px -38px;
+    padding: 28px 42px 26px 38px;
     border-color: @background-light;
     border-radius: 1px;
+}
+
+element-text {
+    font: "Hurmit Nerd Font Mono 47";
 }
 
 element.selected {

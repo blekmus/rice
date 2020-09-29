@@ -16,7 +16,7 @@ eth=""
 
 # Connectivity checker
 active=""
-if (ping -c 1 google.com || ping -c 1 github.com) &>/dev/null; then
+if (ping -c 1 -q google.com) &>/dev/null; then
     if [[ $eth_status == 'connected'  ]]; then
         active="-a 0"
     fi

@@ -14,7 +14,7 @@ set fish_color_valid_path
 
 # Aliases
 alias la "ls -a"
-alias code "code ~/Code/nominal-space.code-workspace"
+alias code "code ~/Code/nominal-space.code-workspace --force-device-scale-factor=1"
 alias gitie "gitbatch -d $HOME/Code/Github"
 
 # Homeshick default config
