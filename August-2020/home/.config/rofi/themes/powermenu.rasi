@@ -25,7 +25,7 @@ element {
 	children: [element-text];
     background-color: @background-light;
     border: 10px;
-    padding: 28px 42px 26px 38px;
+    padding: 28px 42px 67px 38px;
     border-color: @background-light;
     border-radius: 1px;
 }

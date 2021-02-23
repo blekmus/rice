@@ -144,6 +144,7 @@ content                     = %{F#e9fe83}|%{F-}
 content-font                = 2
 
 
+
 [module/net]
 type                        = custom/ipc
 initial                     = 1
@@ -179,3 +180,11 @@ format-font                 = 1
 
 hook-0                      = echo "%{A1:$HOME/.config/sh/rofi_btn_color.sh logo powermenu &:}%{F#95e5cb}%{F-}%{A}" &
 hook-1                      = echo "%{F#e5e1cf}%{F-}" &
+
+
+
+[module/title]
+type = internal/xwindow
+label = %title%
+label-font = 2
+format-offset = 0

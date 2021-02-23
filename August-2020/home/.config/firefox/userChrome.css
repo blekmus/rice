@@ -8,6 +8,7 @@
 :root {
 	--bg: #0e1419;
 	--bg-light: #15212b;
+	--bg-hover-back: #172028;
 }
 
 * {
@@ -29,7 +30,6 @@ toolbar {
 	border: none !important;
 }
 
-#identity-box,
 #tracking-protection-icon-container,
 #urlbar-background{
 	display: none !important;
@@ -98,15 +98,36 @@ toolbar#nav-bar {
 }  
 
 .toolbarbutton-1{
-	--toolbarbutton-hover-background: none !important; 
+	--toolbarbutton-hover-background: var(--bg-hover-back) !important; 
 }
 
 #back-button > .toolbarbutton-icon {
 	transform: scale(.85, .85) !important;
-	animation: none !important;
 	border: none !important;
 	box-shadow: none !important;
 	background: none !important;
+	border-radius: 4px !important;
+}
+
+#back-button:hover > .toolbarbutton-icon {
+	background-color: var(--bg-hover-back) !important;
+}
+
+#back-button[disabled="true"]:hover > .toolbarbutton-icon {
+	background: none !important;
+}
+
+#identity-box {
+	border-radius: 4px !important;
+}
+
+#identity-box:hover {
+  background-color: var(--bg-hover-back) !important;
+}
+
+toolbarbutton[open="true"] > .toolbarbutton-icon,
+toolbarbutton[open="true"] > .toolbarbutton-badge-stack{
+  background-color: var(--bg-hover-back) !important;
 }
 
 .tab-line{

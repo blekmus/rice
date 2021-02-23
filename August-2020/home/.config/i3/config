@@ -15,11 +15,14 @@ bindsym $mod+q kill
 # firefox binding
 bindsym $mod+shift+f exec --no-startup-id firefox
 
+# termius binding
+bindsym $mod+shift+t exec --no-startup-id termius
+
 # picom reset binding
 bindsym $mod+shift+p exec ~/.config/sh/picom-reset.sh
 
 # vscode binding
-bindsym $mod+shift+c exec code ~/Code/nominal-space.code-workspace --force-device-scale-factor=1
+bindsym $mod+shift+c exec code --force-device-scale-factor=1
 
 # torrent binding
 bindsym $mod+shift+q exec --no-startup-id qbittorrent
@@ -174,7 +177,7 @@ set $ws10 "10"
 
 
 
-# Execusions ===========================
+# Executions ===========================
 # start network manager applet on systray
 exec --no-startup-id nm-applet
 
@@ -182,10 +185,10 @@ exec --no-startup-id nm-applet
 exec_always --no-startup-id picom -b
 
 # launch bar
-exec ~/.config/polybar/launch.sh
+exec_always ~/.config/polybar/launch.sh
 
 # auto suspend
-exec xautolock -notify 30 -cornerredelay 30 -notifier "dunstify -u critical -t 20000 'LOCKING in 30s'" -time 20 -locker "systemctl suspend" -corners "+00-"
+exec xautolock -notify 60 -cornerredelay 30 -notifier "dunstify -u critical 'LOCKING in 30s'" -time 20 -locker "systemctl suspend" -corners "+---"
 
 # start feh to display background
 exec_always feh --bg-fill ~/.config/feh/wall.jpg
